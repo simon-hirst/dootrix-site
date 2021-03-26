@@ -1,0 +1,1348 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Neuzeit Grotesk";
+  src: url(../font/NeuzeitGro-Reg.woff2) format('woff2');
+}
+
+/* Header styles */
+header {
+  background-image: url('../img/header.png');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+.header-logo {
+  margin: 5% 1% 0% 4%;
+  flex: 1.0;
+}
+.header-logo img {
+  object-fit: cover;
+  width: auto;
+  height: 0.8125rem;
+}
+.header-bar {
+  margin: 3.75% 1% 0% 2%;
+  flex: 0.08;
+}
+.header-bar img {
+  object-fit: cover;
+  width: 100%;
+  height: 1.5rem;
+}
+.header-mspartner {
+  margin: 4% 0% 0% 3%;
+  flex: 1.75;
+}
+.header-mspartner img {
+  object-fit: cover;
+  width: auto;
+  height: 1.375rem;
+}
+.header-hamburger {
+  margin: 5% 3% 0% 0%;
+  flex: 5.57;
+}
+.header-navitem {
+  display: none;
+}
+.header-hamburger img {
+  float: right;
+}
+.hero-title {
+  /* TODO: fix spacing between this and header-top, consolidate reusable header code */
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+.hero-bar {
+  display: none;
+}
+.hero-subtitle {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.35rem;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0% 5%;
+}
+.hero-infobutton {
+  /* TODO: consolidate buttons, lot of code reuse */
+  padding: 4%;
+  border-radius: 0.25rem;
+  background-color: #FF562D;
+  text-align: center;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #FFFFFF;
+  margin: 35% 3% 2% 3%;
+}
+.hero-contactbutton {
+  padding: 4%;
+  border-radius: 0.25rem;
+  border: 0.125rem solid #EFEFEF;
+  text-align: center;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #FFFFFF;
+  margin: 2% 3% 20.5% 3%;
+}
+
+/* Collaboration section styles */
+.collaboration-container {
+  display: flex;
+  flex-flow: column;
+}
+.collaboration-teamimage {
+  display: none;
+}
+.collaboration-partnersimage {
+  display: none;
+}
+.collaboration-partners {
+  margin: 7.5% 10% 0% 10%;
+  display: flex;
+  flex-direction: column;
+}
+.collaboration-partnerscontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow:scroll;
+  margin: 0% 0% 0% 2%;
+}
+.collaboration-sectionimage {
+  margin: 0% 10% 0% 0%;
+  object-fit: contain;
+  width: auto;
+}
+.collaboration-ellipses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0% 0% 0% 0%;
+}
+.collaboration-ellipsis {
+  height: 0.46875rem;
+  width: 0.46875rem;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin: 0% 4% 0% 0%;
+}
+.collaboration-title h2 {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 10% 5% 0% 5%;
+}
+.collaboration-text {
+  display: none;
+}
+.collaboration-msgoldpartner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2.5% 0% 0% 0%;
+  justify-content: center;
+}
+.collaboration-msgoldpartnerimg {
+  flex: 0;
+  object-fit: none;
+  margin: 0% 2.5% 0% 2.5%;
+}
+.collaboration-mscspimg {
+  flex: 0;
+  object-fit: none;
+  margin: 0% 2.5% 0% 2.5%;
+}
+.collaboration-buttons {
+  display: flex;
+  flex-flow: column;
+}
+.collaboration-infobutton {
+  padding: 4%;
+  border-radius: 0.25rem;
+  background-color: #FF562D;
+  text-align: center;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #FFFFFF;
+  margin: 5% 3% 2% 3%;
+}
+.collaboration-ctabutton {
+  padding: 4%;
+  border-radius: 0.25rem;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #FF562D;
+  margin: 0% 3% 0% 3%;
+  border: 0.125rem solid #FF562D;
+}
+.collaboration-divider {
+  /* TODO: consolidate these dividers */
+  flex: 0;
+  object-fit: contain;
+  margin: 7.5% 0% 2.5% 0%;
+}
+
+/* Services section styles */
+.services {
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(180deg, #FFFFFF 38.96%, rgba(232, 232, 232, 0.5) 133.44%);
+}
+.services-sectioncontainer {
+  display: flex;
+  flex-flow: column;
+}
+.services-header {
+  font-family: "Neuzeit Grotesk";
+  font-size: 1rem;
+  line-height: 1.8125rem;
+  text-align: center;
+  font-weight: 900;
+  font-style: bold;
+  color: #454545;
+  margin: 0% 0% 5% 0%;
+}
+.services-header p {
+  display: none;
+}
+.services-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.services-section h3 {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  text-align: center;
+  color: #FF562D;
+  margin: 3% 0% 4% 0%;
+}
+.services-section p {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-align: center;
+  margin: 0% 0% 2% 0%;
+}
+.services-divider {
+  flex: 0;
+  object-fit: contain;
+  margin: 7.5% 0% 7.5% 0%;
+}
+.services-bottomdivider {
+  flex: 0;
+  object-fit: contain;
+  margin: 7.5% 0% 0% 0%;
+}
+
+/* Partners section styles */
+.partners {
+  display: flex;
+  flex-flow: column;
+}
+.partners-container {
+  display: flex;
+  flex-flow: column;
+}
+.partners-section {
+  display: flex;
+  flex-flow: column;
+}
+.nomobile {
+  display: none;
+}
+.testimonials-ellipses {
+  display: none;
+}
+.partners-sectionheader {
+  display: none;
+}
+.partners-sectiontext {
+  display: none;
+}
+.partners-header {
+  /* fix font */
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #454545;
+  margin: 5% 0% 5% 0%;
+}
+.partners-image {
+  border-radius: 0.25rem;
+  margin: 0% 5% 0% 5%;
+}
+.partners-infobutton {
+  padding: 4%;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  background-color: #FF562D;
+  color: #FFFFFF;
+  margin: 3% 5% 5% 5%;
+}
+.partners-viewalltext {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #FF562D;
+  margin: 2.5% 0% 5% 0%;
+}
+.partners-bottomdivider {
+  flex: 0;
+  object-fit: contain;
+  margin: 7.5% 0% 0% 0%;
+}
+
+/* Testimonials section styles */
+.testimonials {
+  display: flex;
+  flex-flow: column;
+}
+.testimonials-section-content-text-viewmore-pathimage {
+  display: none;
+}
+.testimonials-container {
+  display: flex;
+  flex-flow: column;
+}
+.testimonials-hidemobile {
+  display: none;
+}
+.testimonials-header {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #454545;
+  margin: 5% 0% 0% 0%;
+}
+.testimonials-section {
+  background: #FFFFFF;
+  box-shadow: 0rem 0.25rem 1.5625rem rgba(0, 0, 0, 0.12);
+  border-radius: 1.6rem;
+  margin: 5% 4% 5% 4%;
+  height: 13.75rem;
+}
+.testimonials-section-content {
+  display: flex;
+  flex-direction: row;
+}
+.testimonials-section-content-image {
+  object-fit: fill;
+  border-radius: 100%;
+  height: 3rem;
+  width: auto;
+  margin: 5% 5% 0% 5%;
+}
+.testimonials-section-content-text {
+  display: flex;
+  flex-direction: column;
+}
+.testimonials-section-content-text h3 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin: 6% 0% 0% 0%;
+  font-family: "Neuzeit Grotesk";
+}
+.testimonials-section-content-text h4 {
+  font-size: 0.75rem;
+  margin: 0% 0% 3% 0%;
+  font-family: "Neuzeit Grotesk";
+  color: #AEAEAE;
+}
+.testimonials-section-content-text p {
+  font-family: "Neuzeit Grotesk";
+}
+.testimonials-section-content-text-quote {
+  font-size: 0.875rem;
+  margin: 5% 0% 0% -25%;
+}
+.testimonials-section-content-text-viewmore {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.testimonials-section-content-text-viewmore-linktext {
+  margin: 7.5% 7.5% 0% 0%;
+  text-decoration-line: underline;
+  font-style: bold;
+  font-weight: 900;
+  font-size: 0.875rem;
+}
+.testimonials-section-text {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  margin: 0% 0% 0% 9%;
+  color: #454545;
+}
+.testimonials-section-viewcasestudytext{
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  text-align: right;
+  text-decoration-line: underline;
+  color: #454545;
+  margin: 5% 5% 5% 0%;
+}
+.testimonials-bar {
+  height: 100%;
+  width: 4%;
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  float: left;
+  background-color: #FF562D;
+}
+.testimonials-section-header {
+  display: flex;
+  flex-flow: row;
+  font-family: "Neuzeit Grotesk";
+  align-items: flex-start;
+}
+.testimonials-section-header img {
+  border-radius: 100%;
+  margin: 5%;
+}
+.testimonials-section-header-text h3 {
+  /* TODO: fix positioning */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #454545;
+  margin: 20% 0% 0% 0%;
+}
+.testimonials-section-header-text h4 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: #AEAEAE;
+  margin: 0%;
+}
+.testimonials-viewalltext {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #FF562D;
+  margin: 5% 0% 0% 0%;
+}
+.testimonials-bottomdivider{
+  object-fit: cover;
+  margin: 12.5% 0% 0% 0%;
+}
+
+/* Blog section styles */
+.blog {
+  margin: 0% 0% 0% 0%;
+}
+.blog h2 {
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #454545;
+  margin: 20% 0% 0% 0%;
+}
+.blog-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  margin: 3% 0% 0% 0%;
+}
+.blog-section {
+  background: #FFFFFF;
+  box-shadow: 0rem 0.25rem 1.5625rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  margin: 5% 4% 5% 4%;
+}
+.blog-section-image {
+  object-fit: contain;
+  height: 5rem;
+  width: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.blog-section-arrow {
+  object-fit: none;
+  float: right;
+  margin: 6% 7% 0% 0%;
+}
+.blog-section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Neuzeit Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 1.0625rem;
+}
+.blog-viewlink {
+  display: none;
+}
+.blog-section-content h3 {
+  /* TODO: fix positioning */
+  margin: 5% 0% 0% 7.5%;
+}
+.blog-ellipses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.blog-ellipsis {
+  height: 0.46875rem;
+  width: 0.46875rem;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin: 0% 2% 0% 2%;
+}
+
+/* Footer section styles */
+.footer {
+  margin: 20% 0% 0% 0%;
+  padding: 3% 0% 0% 0%;
+  background-color: #2A385C;
+  display: flex;
+  flex-direction: row;
+}
+.footer-logo {
+  flex: 1.5;
+  margin: 2.5% 3% 0% 5%;
+}
+.footer-bar {
+  flex: 0.5;
+  transform: scaley(0.7);
+  margin: -1% 0% 0% 0%;
+}
+.footer-mspartner {
+  transform: scale(0.85);
+  margin: 0% 40% 0% 0%;
+  flex: 8;
+}
+
+/*** Base and mobile layout end ***/
+
+/* Tablet styles */
+@media screen and (min-width: 600px) {
+  /* Header styles */
+  header {
+    /* TODO: need to fix the background, at the moment it overlays over the entire section interfering with text and other elements */
+    background: linear-gradient(180deg, #282828 0%, rgba(89, 89, 91, 0.6) 100%);
+    background-image: url('../img/header.png');
+    background-position: center bottom;
+    background-size: cover;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+  }
+  .header-container {
+    align-items: center;
+    margin: 3% 6% 0% 7%;
+  }
+  .header-logo {
+    margin: 0% 3% 0% 0%;
+    flex: 1.1;
+  }
+  .header-logo img {
+    height: 30%;
+    width: auto;
+  }
+  .header-bar {
+    margin: 0% 2% 0% 0%;
+    flex: 0.08;
+  }
+  .header-bar img {
+    height: 90%;
+    width: auto;
+  }
+  .header-mspartner {
+    margin: 0% 0% 0% 0%;
+    flex: 6.62;
+  }
+  .header-mspartner img {
+    height: 80%;
+    width: auto;
+  }
+  .header-hamburger {
+    margin: 0% 0% 0% 0%;
+    flex: 2.2;
+  }
+  .hero-title {
+    margin: 15% 0% 0% 6.5%;
+    text-align: left;
+  }
+  .hero-subtitle {
+    text-align: left;
+    margin: 2% 11% 0% 6.5%;
+  }
+  .hero-subtitle span {
+    /* TODO: find a better solution for all this span hiding and replacing, especially with the buttons as it makes the element names completely wrong */
+    display: none;
+  }
+  .hero-subtitle:after {
+    content: "We provide solutions that deliver business value. Driving growth, innovation and efficiency with intelligent technology. Cloud-native solutions engineered with integrity, transforming businesses and improving human experiences, one step at a time.";
+  }
+  .hero-infobutton {
+    padding: 1.5% 10% 1.5% 10%;
+    display: inline-block;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #FFFFFF;
+    margin: 5% 2% 15% 6.5%;
+    background-color: transparent;
+  }
+  .hero-infobutton span {
+    display: none;
+  }
+  .hero-infobutton:after {
+    content: "Get in touch";
+  }
+  .hero-contactbutton {
+    padding: 1.5% 10% 1.5% 10%;
+    display: inline-block;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #FF562D;
+    background-color: #FF562D;
+    margin: 5% 0% 0% 0%;
+  }
+  .hero-contactbutton span {
+    display: none;
+  }
+  .hero-contactbutton:after {
+    content: "Find out more"
+  }
+
+  /* Collaboration section styles */
+  .collaboration-partnerscontainer {
+    display: none;
+  }
+  .collaboration-partnersimage {
+    display: block;
+  }
+  .collaboration-infobutton span {
+    display: none;
+  }
+  .collaboration-infobutton:after {
+    content: "Other CTA";
+  }
+  .collaboration-ctabutton span {
+    display: none;
+  }
+  .collaboration-ctabutton:after {
+    content: "Find out more";
+  }
+  .collaboration-divider {
+    display: none;
+  }
+  .collaboration-ellipses {
+    display: none;
+  }
+  .collaboration-content {
+    display: flex;
+    flex-flow: row;
+    margin: 5% 8.5% 0% 8.5%;
+    align-items: flex-start;
+  }
+  .collaboration-partners {
+    margin: 1.5% 6.25% 0% 6.25%;
+    justify-content: center;
+  }
+  .collaboration-partnersimage {
+    content: url("../img/collaboration-partnersfull.svg");
+    max-width: 100%;
+  }
+  .collaboration-teamimage {
+    display: flex;
+    margin: 0% 2.5% 0% 0%;
+    object-fit: contain;
+    max-width: 70%;
+  }
+  .collaboration-selectedellipsis {
+    /* These two are just placeholders and will get replaced once the mobile style is updated, hiding for now */
+    display: none;
+  }
+  .collaboration-unselectedellipsis {
+    display: none;
+  }
+  .collaboration-title h2 {
+    text-align: left;
+    margin: 0% 0% 0% 0%;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+  .collaboration-text{
+    display: flex;
+    margin: 3% 10% 0% 0%;
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+  .collaboration-msgoldpartner {
+    margin: 3% 0% 0% -1%;
+    justify-content: flex-start;
+  }
+  .collaboration-msgoldpartnerimg {
+    margin: 0% 5% 0% 0%;
+  }
+  .collaboration-mscspimg {
+    content: url(../img/collaboration-mscsp.png);
+  }
+  .collaboration-infobutton {
+    /* TODO: similar to before, try find a better solution */
+    padding: 3% 10% 3% 10%;
+    margin: 4% 4% 0% 0%;
+    background-color: #FFFFFF;
+    border: 0.125rem solid #FF562D;
+    color: #FF562D;
+  }
+  .collaboration-ctabutton {
+    padding: 3% 10% 3% 10%;
+    margin: 4% 0% 0% 0%;
+    background-color: #FF562D;
+    color: #FFFFFF;
+  }
+  .collaboration-buttons {
+    flex-flow: row;
+  }
+
+  /* Services section styles */
+  .services-divider {
+    display: none;
+  }
+  .services-bottomdivider {
+    display: none;
+  }
+  .services-header {
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+    font-style: normal;
+    text-align: left;
+    color: #282828;
+    margin: 2.5% 15% 0% 8.5%;
+  }
+  .services-header p {
+    display: flex;
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    color: #454545;
+  }
+  .services-sectioncontainer {
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 2.5% 5% 5% 5%;
+  }
+  .services-section h3 {
+    margin: 10% 0% 4% 0%;
+  }
+  .services-section p {
+    margin: 4% 0% 0% 0%;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+
+  /* Partners section styles */
+  .nomobile {
+    display: flex;
+    flex-flow: column;
+  }
+  .partners-container {
+    flex-flow: row;
+    margin: 1% 8% 0% 8%;
+  }
+  .partners-section {
+    display: flex;
+    flex-flow: column;
+  }
+  .partners-header {
+    /* fix font */
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+    text-align: left;
+    color: #282828;
+    margin: 2.5% 0% 0% 9%;
+  }
+  .partners-image {
+    max-width: 100%;
+  }
+  .partners-infobutton {
+    padding: 6%;
+    margin: 8% 5% 5% 5%;
+  }
+  .partners-viewalltext {
+    display: none;
+  }
+  .partners-bottomdivider {
+    display: none;
+  }
+
+  /* Testimonial section styles */
+  .testimonials-header {
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+    text-align: left;
+    color: #282828;
+    margin: 2.5% 0% 0% 9%;
+  }
+  .testimonials-container {
+    flex: 1;
+    flex-direction: row;
+    overflow: auto;
+    margin: 0% 0% 0% 6%;
+    padding: 3%;
+  }
+  .testimonials-hidemobile {
+    display: block;
+  }
+  .testimonials-section {
+    flex: 0 0 62.5%;
+    margin: 0% 2.5% 0% 0%;
+    height: 17.5rem;
+    border-radius: 0.5rem;
+    background: #FFFFFF;
+    box-shadow: 0rem 0.25rem 1.5625rem rgba(0, 0, 0, 0.12);
+  }
+  .testimonials-bar {
+    width: 2.5%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .testimonials-section-content {
+    margin: 3% 0% 0% 0%;
+    display: flex;
+    flex-direction: row;
+  }
+  .testimonials-section-content-image {
+    object-fit: fill;
+    border-radius: 100%;
+    height: 4.5rem;
+    width: auto;
+    margin: 0% 5% 0% 5%;
+  }
+  .testimonials-section-content-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials-section-content-text h3 {
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+    margin: 2% 0% 2% 0%;
+    font-family: "Neuzeit Grotesk";
+  }
+  .testimonials-section-content-text h4 {
+    margin: 0% 0% 3% 0%;
+    font-family: "Neuzeit Grotesk";
+    color: #AEAEAE;
+  }
+  .testimonials-section-content-text p {
+    font-family: "Neuzeit Grotesk";
+  }
+  .testimonials-section-content-text-quote {
+    margin: 0% 10% 2.5% 0%;
+  }
+  .testimonials-section-content-text-viewmore {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 14% 0% 0% 0%;
+  }
+  .testimonials-section-content-text-viewmore-linktext {
+    margin: 0% 0% 0% 0%;
+    text-decoration-line: underline;
+    font-style: bold;
+    font-weight: 900;
+  }
+  .testimonials-section-content-text-viewmore-pathimage {
+    margin: -0.5% 7.5% 0% 5%;
+    display: block;
+  }
+  .testimonials-ellipses {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .testimonials-ellipsis {
+    height: 1rem;
+    width: 1rem;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    margin: 2% 2% 0% 2%;
+  }
+  .testimonials-viewalltext {
+    display: none;
+  }
+  .testimonials-bottomdivider {
+    display: none;
+  }
+
+  /* Blog section styles */
+  .blog h2 {
+    font-size: 1.8rem;
+    line-height: 1.875rem;
+    text-align: left;
+    margin: 5% 0% 0% 9%;
+    color: #282828;
+  }
+  .blog-container {
+    margin: 2% 0% 0% 5%;
+    padding: 4%;
+  }
+  .blog-section {
+    flex: 0 0 30%;
+    margin: 0% 2% 0% 0%;
+    padding: 2%;
+  }
+  .blog-section-image {
+    object-fit: fill;
+    height: 11rem;
+    width: auto;
+  }
+  .blog-section-content {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .blog-ellipsis {
+    height: 1rem;
+    width: 1rem;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    margin: 2% 2% 5% 2%;
+  }
+
+  /* Footer styles */
+  .footer {
+    align-items: center;
+    margin: 3% 0% 0% 0%;
+    padding: 2%;
+  }
+  .footer-logo {
+    margin: 1% 2% 0% 7.5%;
+    flex: 1.25;
+  }
+  .footer-logo img {
+    height: 30%;
+    width: auto;
+  }
+  .footer-bar {
+    margin: 0.5% 0% 0% 0%;
+    flex: 0.08;
+  }
+  .footer-bar img {
+    height: 90%;
+    width: auto;
+  }
+  .footer-mspartner {
+    margin: 1% 0% 0% -3%;
+    flex: 9.67;
+  }
+  .footer-mspartner img {
+    height: 80%;
+    width: auto;
+  }
+}
+
+/* End of tablet styles */
+
+/* Desktop styles */
+@media screen and (min-width: 1200px) {
+  /* Header styles */
+  header {
+    background-image: url('../img/header.png');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2.5% 5% 0% 10%;
+  }
+  .header-logo {
+    margin: 0% 0% 0% 0%;
+    flex: 0.75;
+  }
+  .header-logo img {
+    height: 100%;
+    width: auto;
+  }
+  .header-bar {
+    margin: 0% 0% 0% 0.5%;
+    flex: 0.2;
+  }
+  .header-mspartner {
+    margin: 0% 0% 0% 0%;
+    flex: 3.0;
+  }
+  .header-mspartner img {
+    height: 100%;
+    width: auto;
+  }
+  .header-navitem {
+    display: block;
+    flex: 0.95;
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.0625rem;
+    color: #FFFFFF;
+  }
+  .header-hamburger {
+    display: none;
+  }
+  .hero-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-row {
+    display: flex;
+    flex-direction: row;
+    margin: 6% 10% 5% 10%;
+  }
+  .hero-bar {
+    display: block;
+    margin: 0% 0% 0% 0%;
+  }
+  .hero-title {
+    font-size: 5.625rem;
+    line-height: 6.75rem;
+    margin: 1% 0% 0% 2.5%;
+  }
+  .hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin: 2.5% 40% 0% 2.5%;
+  }
+  .hero-buttonrow {
+    display: flex;
+    flex-direction: row;
+    margin: 2.5% 0% 0% 2.5%;
+  }
+  .hero-infobutton {
+    padding: 1.5% 10% 1.5% 10%;
+    margin: 0% 2.5% 0% 0%;
+  }
+  .hero-infobutton:after {
+    content: "Other CTA";
+  }
+  .hero-contactbutton {
+    padding: 1.5% 10% 1.5% 10%;
+    margin: 0% 0% 0% 0%;
+  }
+
+  /* Collaboration styles */
+  .collaboration-partners {
+    margin: -2.75% 6.25% 0% 6.25%;
+    justify-content: center;
+    align-items: center;
+  }
+  .collaboration-partnersimage {
+    width: 65%;
+    height: auto;
+  }
+  .collaboration-teamimage {
+    margin: 0% 2.0% 0% 1.5%;
+    object-fit: cover;
+    max-width: 100%;
+    content: url(../img/collaboration-teamdesktop.png);
+  }
+  .collaboration-content {
+    margin: 2% 8.5% 0% 8.5%;
+  }
+  .collaboration-title h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .collaboration-text{
+    margin: 1% 10% 0% 0%;
+  }
+  .collaboration-msgoldpartner {
+    margin: 2% 0% 0% -0.25%;
+    flex-wrap: nowrap;
+  }
+  .collaboration-msgoldpartnerimg {
+    object-fit: contain;
+    content: url(../img/collaboration-msgoldpartnerdesktop.png);
+  }
+  .collaboration-mscspimg {
+    object-fit: contain;
+    content: url(../img/collaboration-mscspdesktop.png);
+  }
+  .collaboration-infobutton {
+    padding: 1.5% 10% 1.5% 10%;
+    margin: 10% 4% 0% 0%;
+  }
+  .collaboration-ctabutton {
+    padding: 1.5% 10% 1.5% 10%;
+    margin: 10% 0% 0% 0%;
+  }
+
+  /* Services styles */
+  .services-header {
+    font-size: 1.4rem;
+    line-height: 2.25rem;
+    margin: 2.5% 9.5% 0% 9.5%;
+  }
+  .services-header p {
+    font-size: 1rem;
+  }
+  .services-sectioncontainer {
+    margin: 2.5% 10% 5% 10%;
+  }
+  .services-section h3 {
+    font-size: 1.875rem;
+  }
+  .services-section p {
+    font-size: 1.125rem;
+    line-height: 1.0625rem;
+  }
+
+  /* Partners styles */
+  .partners-header {
+    font-size: 1.4rem;
+    line-height: 1.875rem;
+    margin: 2.5% 0% 0% 9%;
+  }
+  .partners-container {
+    flex-flow: row;
+    margin: 0% 7% 0% 7%;
+    justify-content: space-evenly;
+  }
+  .partners-infobutton {
+    padding: 4%;
+    margin: 8% 5% 5% 5%;
+  }
+  .partners-image {
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+  }
+  .partners-sectionheader {
+    display: block;
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #282828;
+    margin: 4% 0% 0% 5%;
+  }
+  .partners-sectiontext {
+    display: block;
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #454545;
+    margin: 0% 4% 0% 5%;
+  }
+  .partners-infobutton {
+    padding: 3%;
+    margin: 5% 5% 0% 5%;
+  }
+
+  /* Testimonials styles */
+  .testimonials-header {
+    font-size: 1.4rem;
+    line-height: 1.875rem;
+    margin: 2.5% 0% 0% 9%;
+  }
+  .testimonials-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0% 7% 0% 7%;
+    background: none;
+    box-shadow: none;
+    padding: 1%;
+  }
+  .testimonials-section {
+    flex: 1 1 calc(45% - 20px);
+    margin: 0% 0% 0% 0%;
+    height: 15rem;
+    width: 50%;
+    margin: 0.5%;
+  }
+  .testimonials-section-content {
+    margin: 0% 0% 0% 0%;
+  }
+  .testimonials-section-content-image {
+    margin: 3% 5% 0% 3%;
+  }
+  .testimonials-section-content-text h3 {
+    font-size: 1.875rem;
+    margin: 4% 0% 1% 0%;
+  }
+  .testimonials-section-content-text h4 {
+    font-size: 1rem;
+    margin: 0% 0% 4% 0%;
+  }
+  .testimonials-section-content-text-quote {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin: 0% 4% 0% 0%;
+  }
+  .testimonials-section-content-text-viewmore {
+    margin: 5% 4% 0% 0%;
+  }
+  .testimonials-section-content-text-viewmore-linktext {
+    font-size: 1rem;
+    margin: 0% 2% 0% 0%;
+  }
+  .testimonials-section-content-text-viewmore-pathimage {
+    margin: 0% 0% 0% 0%;
+  }
+  .testimonials-ellipses {
+    display: none;
+  }
+
+  /* Blog styles */
+  .blog h2 {
+    font-size: 2rem;
+    margin: 3% 0% 0% 8.5%;
+  }
+  .blog-container {
+    margin: 1% 7% 0% 8%;
+    padding: 1%;
+  }
+  .blog-section {
+    flex: 1;
+    padding: 0%;
+  }
+  .blog-viewlink {
+    display: block;
+  }
+  .blog-section-content {
+    margin: 0% 0% 4% 0%;
+  }
+  .blog-ellipsis {
+    display: none;
+  }
+  .blog-section-arrow {
+    transform: scale(1.5);
+  }
+  .blog-viewlink {
+    font-family: "Neuzeit Grotesk";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-decoration-line: underline;
+    color: #454545;
+    margin: 1% 0% 2.5% 8.5%;
+  }
+
+  /* Footer styles */
+  .footer {
+    margin: 0% 0% 0% 0%;
+    padding: 1%;
+  }
+  .footer-logo {
+    margin: 0% 0% 0% 0%;
+    flex: 1.5;
+  }
+  .footer-logo img {
+    height: 1.25rem;
+    width: auto;
+    float: right;
+  }
+  .footer-bar {
+    margin: 0% 0% 0% 0%;
+    flex: 0.16;
+  }
+  .footer-bar img {
+    height: 3.75rem;
+    width: auto;
+    float: right;
+  }
+  .footer-mspartner {
+    margin: 0% 0% 0% -5%;
+    flex: 8.34;
+  }
+  .footer-mspartner img {
+    height: 3rem;
+    width: auto;
+    float: left;
+  }
+}
+
+/* End of desktop styles */
