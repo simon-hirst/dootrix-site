@@ -14,6 +14,7 @@ html {
   src: url(../font/NeuzeitGro-Reg.woff2) format('woff2');
 }
 
+/* Base / Mobile styles */
 /* Header styles */
 header {
   background-image: url('../img/header.png');
@@ -1038,11 +1039,12 @@ header {
   }
   .header-logo {
     margin: 0% 0% 0% 0%;
-    flex: 0.75;
+    flex: 1.0;
   }
   .header-logo img {
-    height: 100%;
-    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
   }
   .header-bar {
     margin: 0% 0% 0% 0.5%;
@@ -1050,7 +1052,7 @@ header {
   }
   .header-mspartner {
     margin: 0% 0% 0% 0%;
-    flex: 3.0;
+    flex: 2.15;
   }
   .header-mspartner img {
     height: 100%;
